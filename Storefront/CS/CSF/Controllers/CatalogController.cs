@@ -50,6 +50,7 @@ namespace Sitecore.Reference.Storefront.Controllers
     using Sitecore.Reference.Storefront.Extensions;
     using System.Web.UI;
     using Sitecore.Reference.Storefront.Util;
+    using CommerceServer.Core.Runtime.Marketing;
 
     /// <summary>
     /// Used to manage the data and view retrieval for catalog pages
@@ -926,6 +927,8 @@ namespace Sitecore.Reference.Storefront.Controllers
 
             var productViewModel = new ProductViewModel(productItem);
             productViewModel.Initialize(rendering, variants);
+            //Set dscount info
+            this.GetProductDiscountInfo(productItem);
 
             productViewModel.ProductName = productViewModel.DisplayName;
 
@@ -953,6 +956,34 @@ namespace Sitecore.Reference.Storefront.Controllers
 
             this.CurrentSiteContext.Items[CurrentProductViewModelKeyName] = productViewModel;
             return productViewModel;
+        }
+
+        /// <summary>
+        /// Gets the Discount information for a product for display on the details page
+        /// TODO - Not sure this is the best way to do this. Investigate
+        /// </summary>
+        /// <param name="productItem">The item to get discount info</param>
+        /// <returns></returns>
+        protected List<string> GetProductDiscountInfo(Item productItem)
+        {
+            var _discounts = new List<string>();
+            DiscountItemCollection dic = DiscountItemCollection.CreateFromCache("Discounts");
+
+            DiscountCriteriaFilter filter = new DiscountCriteriaFilter();
+            filter.FilterOnAward = true;
+            filter.FilterOnCondition = false;
+            filter.IncludeDiscountsWithEligibilityRequirements = true;
+            filter.IncludeDiscountsWithPromoCodes = false;
+            filter.IncludeInactiveDiscounts = false;
+
+            DiscountItemCollection discounts = dic.ApplyProductFilter(filter, this.CurrentCatalog.Name, productItem.Name);
+
+            foreach (DiscountItem item in discounts)
+            {
+                _discounts.Add(item.GetBasketDisplay());
+            }
+
+            return _discounts;
         }
 
         /// <summary>

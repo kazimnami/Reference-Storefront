@@ -90,6 +90,13 @@ namespace Sitecore.Reference.Storefront.Models
         public string TelephoneNumber { get; set; }
 
         /// <summary>
+        /// Gets or sets the skype name
+        /// </summary>
+        [Required]
+        [Display(Name = "Skype Name")]
+        public string SkypeName { get; set; }
+
+        /// <summary>
         /// Gets or sets the password.
         /// </summary>
         /// <value>

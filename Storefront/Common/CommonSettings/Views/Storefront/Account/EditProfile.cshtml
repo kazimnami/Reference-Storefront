@@ -18,7 +18,7 @@
     var firstName = Html.Sitecore().Field("First Name", currentPage);
     var surname = Html.Sitecore().Field("Surname", currentPage);
     var email = Html.Sitecore().Field("Email", currentPage);
-    var repeatEmail = Html.Sitecore().Field("Repeat Email", currentPage);    
+    var repeatEmail = Html.Sitecore().Field("Repeat Email", currentPage);
     var saveChanges = Html.Sitecore().Field("Save Changes Button", currentPage);
     var savingChanges = Html.Sitecore().Field("Saving Changes Button", currentPage);
     var cancel = Html.Sitecore().Field("Cancel Button", currentPage);
@@ -33,7 +33,7 @@
     var firstNameRequiredMsg = Html.Sitecore().Field("First Name Required Message", currentPage);
     var lastNameRequiredMsg = Html.Sitecore().Field("Last Name Required Message", currentPage);
     var emailRequiredMsg = Html.Sitecore().Field("Email Required Message", currentPage);
-    var telephoneRequiredMsg = Html.Sitecore().Field("Telephone Number Required Message", currentPage);  
+    var telephoneRequiredMsg = Html.Sitecore().Field("Telephone Number Required Message", currentPage);
 }
 
 @using (Ajax.BeginForm("UpdateProfile", "Account", null, new AjaxOptions { OnBegin = "SetSavingProfileButton", OnSuccess = "UpdateProfileSuccess", OnFailure = "UpdateProfileFailure", HttpMethod = "Post" }, new { @id = "UpdateProfileForm" }))
@@ -113,6 +113,15 @@
                         })
 
                         @Html.ValidationMessageFor(m => m.TelephoneNumber)
+                    </div>
+                    <div class="form-group">
+                        <label for="SkypeName">Skype Name</label>
+                        @Html.TextBoxFor(m => m.SkypeName,
+                        new
+                        {
+                            @class = "form-control"
+                        })
+                        @Html.ValidationMessageFor(m => m.SkypeName)
                     </div>
                 </div>
             </div>

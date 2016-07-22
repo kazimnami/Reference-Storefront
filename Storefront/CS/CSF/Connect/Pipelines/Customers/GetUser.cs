@@ -73,6 +73,7 @@ namespace Sitecore.Reference.Storefront.Connect.Pipelines
         protected void UpdateCustomer(Sitecore.Commerce.Entities.Customers.CommerceUser commerceUser, Sitecore.Security.UserProfile userProfile)
         {
             commerceUser.ExternalId = userProfile["user_id"];
+            commerceUser.SetPropertyValue("skype_name", userProfile["skype_name"]);
             Assert.IsNotNullOrEmpty(commerceUser.ExternalId, "commerceUser.ExternalId");
 
             if (commerceUser.Customers == null || commerceUser.Customers.Count == 0)

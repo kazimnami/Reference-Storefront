@@ -198,6 +198,7 @@ namespace Sitecore.Reference.Storefront.Controllers
             model.EmailRepeat = commerceUser.Email;
             model.LastName = commerceUser.LastName;
             model.TelephoneNumber = commerceUser.GetPropertyValue("Phone") as string;
+            model.SkypeName = commerceUser.GetPropertyValue("skype_name") as string;
 
             return View(this.GetRenderingView("EditProfile"), model);
         }
@@ -457,11 +458,12 @@ namespace Sitecore.Reference.Storefront.Controllers
                     model.FirstName = commerceUser.FirstName;
                     model.Email = commerceUser.Email;
                     model.LastName = commerceUser.LastName;
-                    model.TelephoneNumber = commerceUser.GetPropertyValue("Phone") as string;
-                }
-            }
+        model.TelephoneNumber = commerceUser.GetPropertyValue("Phone") as string;
+        model.SkypeName = commerceUser.GetPropertyValue("skype_name") as string;
+    }
+}
 
-            Item item = Context.Item.Children.SingleOrDefault(p => p.Name == "EditProfile");
+Item item = Context.Item.Children.SingleOrDefault(p => p.Name == "EditProfile");
 
             if (item != null)
             {

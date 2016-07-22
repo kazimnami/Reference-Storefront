@@ -1,0 +1,21 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+*.bak
+*.user
+/Storefront/Common/CommonSettings/bin
+/Storefront/Common/CommonSettings/obj
+/Storefront/.vs/Commerce.Server.Storefront/v14/.suo
+/Storefront/.vs/config/applicationhost.config
+/Storefront/Common/Project/bin/Debug
+/Storefront/Common/Project/bin/Release
+/Storefront/Common/Project/obj
+/Storefront/CS/CSF/bin
+/Storefront/CS/CSF/obj
+/Storefront/CS/Database
+/Storefront/Lib
+/Storefront/packages
+/Storefront/UpgradeLog3.htm
+/Storefront/UpgradeLog2.htm
+/Storefront/UpgradeLog.htm

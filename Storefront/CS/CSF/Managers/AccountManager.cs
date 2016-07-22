@@ -215,6 +215,7 @@ namespace Sitecore.Reference.Storefront.Managers
                 commerceUser.LastName = inputModel.LastName;
                 commerceUser.Email = inputModel.Email;
                 commerceUser.SetPropertyValue("Phone", inputModel.TelephoneNumber);
+                commerceUser.SetPropertyValue("skype_name", inputModel.SkypeName);
 
                 try
                 {

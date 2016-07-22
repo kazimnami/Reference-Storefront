@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>http://csDemo/</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="App_Config/CommerceServer.Core.config">
+      <publishTime>06/23/2016 22:46:39</publishTime>
+    </File>
+    <File Include="App_Config/Include/Reference.Storefront/Reference.Storefront.Carts.config">
+      <publishTime>06/23/2016 22:46:39</publishTime>
+    </File>
+    <File Include="App_Config/Include/Reference.Storefront/Reference.Storefront.Catalog.config">
+      <publishTime>06/23/2016 22:46:39</publishTime>
+    </File>
+    <File Include="App_Config/Include/Reference.Storefront/Reference.Storefront.config">
+      <publishTime>06/23/2016 23:31:26</publishTime>
+    </File>
+    <File Include="App_Config/Include/Reference.Storefront/Reference.Storefront.Customer.config">
+      <publishTime>07/19/2016 01:28:14</publishTime>
+    </File>
+    <File Include="App_Config/Include/Reference.Storefront/Reference.Storefront.Index.Lucene.config">
+      <publishTime>06/23/2016 22:46:39</publishTime>
+    </File>
+    <File Include="App_Config/Include/Reference.Storefront/Reference.Storefront.Index.Solr.config.example">
+      <publishTime>06/23/2016 22:46:39</publishTime>
+    </File>
+    <File Include="App_Config/Include/Reference.Storefront/Reference.Storefront.Orders.config">
+      <publishTime>06/23/2016 22:46:39</publishTime>
+    </File>
+    <File Include="App_Config/Include/Reference.Storefront/Reference.Storefront.Payments.config">
+      <publishTime>06/23/2016 22:46:39</publishTime>
+    </File>
+    <File Include="App_Config/Include/Reference.Storefront/Reference.Storefront.Prices.config">
+      <publishTime>06/23/2016 22:46:39</publishTime>
+    </File>
+    <File Include="App_Config/Include/Reference.Storefront/Reference.Storefront.Shipping.config">
+      <publishTime>06/23/2016 22:46:39</publishTime>
+    </File>
+    <File Include="App_Config/Include/Reference.Storefront/Sitecore.ItemWebApi.config">
+      <publishTime>06/23/2016 22:46:39</publishTime>
+    </File>
+    <File Include="bin/ADODB.dll">
+      <publishTime>10/22/2009 20:51:18</publishTime>
+    </File>
+    <File Include="bin/AntiXssLibrary.dll">
+      <publishTime>06/23/2016 22:54:51</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>06/23/2016 22:54:51</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.pdb">
+      <publishTime>06/23/2016 22:54:51</publishTime>
+    </File>
+    <File Include="bin/Castle.Core.dll">
+      <publishTime>06/23/2016 22:54:51</publishTime>
+    </File>
+    <File Include="bin/Castle.Windsor.dll">
+      <publishTime>06/23/2016 22:54:51</publishTime>
+    </File>
+    <File Include="bin/CommerceMessageManager.dll">
+      <publishTime>06/23/2016 22:46:39</publishTime>
+    </File>
+    <File Include="bin/CommerceServer.Core.Catalog.dll">
+      <publishTime>02/05/2016 12:35:12</publishTime>
+    </File>
+    <File Include="bin/CommerceServer.Core.Configuration.dll">
+      <publishTime>02/05/2016 12:35:22</publishTime>
+    </File>
+    <File Include="bin/CommerceServer.Core.CrossTier.dll">
+      <publishTime>02/05/2016 12:35:22</publishTime>
+    </File>
+    <File Include="bin/CommerceServer.Core.Internal.ContentListHelper.dll">
+      <publishTime>02/05/2016 12:35:14</publishTime>
+    </File>
+    <File Include="bin/CommerceServer.Core.Interop.dll">
+      <publishTime>02/05/2016 12:35:20</publishTime>
+    </File>
+    <File Include="bin/CommerceServer.Core.Interop.Security.AzRoles.dll">
+      <publishTime>02/05/2016 12:35:20</publishTime>
+    </File>
+    <File Include="bin/CommerceServer.Core.Orders.CrossTier.dll">
+      <publishTime>02/05/2016 12:35:16</publishTime>
+    </File>
+    <File Include="bin/CommerceServer.Core.Profiles.dll">
+      <publishTime>02/05/2016 12:35:10</publishTime>
+    </File>
+    <File Include="bin/CommerceServer.Core.Runtime.dll">
+      <publishTime>02/05/2016 12:35:08</publishTime>
+    </File>
+    <File Include="bin/CommerceServer.Core.Shared.dll">
+      <publishTime>02/05/2016 12:35:12</publishTime>
+    </File>
+    <File Include="bin/cssapilib.dll">
+      <publishTime>02/05/2016 12:35:10</publishTime>
+    </File>
+    <File Include="bin/de-DE/CommerceMessageManager.resources.dll">
+      <publishTime>06/23/2016 22:46:39</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.AspNet.dll">
+      <publishTime>06/23/2016 22:54:50</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.Core.dll">
+      <publishTime>06/23/2016 22:54:51</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.OAuth.Consumer.dll">
+      <publishTime>06/23/2016 22:54:50</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.OAuth.dll">
+      <publishTime>06/23/2016 22:54:50</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.OpenId.dll">
+      <publishTime>06/23/2016 22:54:51</publishTime>
+    </File>
+    <File Include="bin/DotNetOpenAuth.OpenId.RelyingParty.dll">
+      <publishTime>06/23/2016 22:54:50</publishTime>
+    </File>
+    <File Include="bin/en-us/CommerceMessageManager.resources.dll">
+      <publishTime>06/23/2016 22:46:39</publishTime>
+    </File>
+    <File Include="bin/EN/CommerceServer.Core.Catalog.resources.dll">
+      <publishTime>02/05/2016 12:35:14</publishTime>
+    </File>
+    <File Include="bin/EN/CommerceServer.Core.Configuration.resources.dll">
+      <publishTime>02/05/2016 12:35:20</publishTime>
+    </File>
+    <File Include="bin/EN/CommerceServer.Core.CrossTier.resources.dll">
+      <publishTime>02/05/2016 12:35:12</publishTime>
+    </File>
+    <File Include="bin/EN/CommerceServer.Core.Internal.ContentListHelper.resources.dll">
+      <publishTime>02/05/2016 12:35:22</publishTime>
+    </File>
+    <File Include="bin/EN/CommerceServer.Core.Orders.CrossTier.resources.dll">
+      <publishTime>02/05/2016 12:35:20</publishTime>
+    </File>
+    <File Include="bin/EN/CommerceServer.Core.Profiles.resources.dll">
+      <publishTime>02/05/2016 12:35:10</publishTime>
+    </File>
+    <File Include="bin/EN/CommerceServer.Core.Runtime.resources.dll">
+      <publishTime>02/05/2016 12:35:20</publishTime>
+    </File>
+    <File Include="bin/EN/CommerceServer.Core.Shared.resources.dll">
+      <publishTime>02/05/2016 12:35:18</publishTime>
+    </File>
+    <File Include="bin/fr-fr/CommerceMessageManager.resources.dll">
+      <publishTime>06/23/2016 22:46:39</publishTime>
+    </File>
+    <File Include="bin/Interop.CSBoot.dll">
+      <publishTime>02/05/2016 12:35:22</publishTime>
+    </File>
+    <File Include="bin/Interop.PupFile.dll">
+      <publishTime>02/05/2016 12:35:12</publishTime>
+    </File>
+    <File Include="bin/ja-JP/CommerceMessageManager.resources.dll">
+      <publishTime>06/23/2016 22:46:39</publishTime>
+    </File>
+    <File Include="bin/Microsoft.StdFormat.dll">
+      <publishTime>03/19/2010 00:21:56</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>06/23/2016 22:54:51</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.WebPages.OAuth.dll">
+      <publishTime>06/23/2016 22:54:51</publishTime>
+    </File>
+    <File Include="bin/Mono.Math.dll">
+      <publishTime>06/23/2016 22:54:51</publishTime>
+    </File>
+    <File Include="bin/MSCSCoreLib.dll">
+      <publishTime>02/05/2016 12:35:08</publishTime>
+    </File>
+    <File Include="bin/MSXMLLib.dll">
+      <publishTime>02/05/2016 12:35:12</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>06/23/2016 22:54:52</publishTime>
+    </File>
+    <File Include="bin/Org.Mentalis.Security.Cryptography.dll">
+      <publishTime>06/23/2016 22:54:51</publishTime>
+    </File>
+    <File Include="bin/Sitecore.Analytics.Core.dll">
+      <publishTime>06/07/2016 22:27:45</publishTime>
+    </File>
+    <File Include="bin/Sitecore.Analytics.DataAccess.dll">
+      <publishTime>06/07/2016 22:27:45</publishTime>
+    </File>
+    <File Include="bin/Sitecore.Analytics.dll">
+      <publishTime>06/07/2016 22:27:45</publishTime>
+    </File>
+    <File Include="bin/Sitecore.Analytics.Model.dll">
+      <publishTime>06/07/2016 22:27:45</publishTime>
+    </File>
+    <File Include="bin/Sitecore.Analytics.MongoDB.dll">
+      <publishTime>06/07/2016 22:27:45</publishTime>
+    </File>
+    <File Include="bin/Sitecore.Analytics.Outcome.dll">
+      <publishTime>06/07/2016 22:27:45</publishTime>
+    </File>
+    <File Include="bin/Sitecore.Buckets.dll">
+      <publishTime>06/07/2016 22:27:46</publishTime>
+    </File>
+    <File Include="bin/Sitecore.Commerce.Connect.CommerceServer.dll">
+      <publishTime>06/16/2016 04:26:37</publishTime>
+    </File>
+    <File Include="bin/Sitecore.Commerce.dll">
+      <publishTime>06/16/2016 04:20:03</publishTime>
+    </File>
+    <File Include="bin/Sitecore.Commerce.Storefront.xml">
+      <publishTime>07/19/2016 01:45:49</publishTime>
+    </File>
+    <File Include="bin/Sitecore.ContentSearch.dll">
+      <publishTime>06/07/2016 22:27:46</publishTime>
+    </File>
+    <File Include="bin/Sitecore.ContentSearch.Linq.dll">
+      <publishTime>06/07/2016 22:27:46</publishTime>
+    </File>
+    <File Include="bin/Sitecore.Kernel.dll">
+      <publishTime>06/07/2016 22:27:46</publishTime>
+    </File>
+    <File Include="bin/Sitecore.Marketing.dll">
+      <publishTime>06/07/2016 22:27:47</publishTime>
+    </File>
+    <File Include="bin/Sitecore.Mvc.dll">
+      <publishTime>06/07/2016 22:27:47</publishTime>
+    </File>
+    <File Include="bin/Sitecore.Reference.Storefront.Common.dll">
+      <publishTime>07/13/2016 01:28:19</publishTime>
+    </File>
+    <File Include="bin/Sitecore.Reference.Storefront.Common.pdb">
+      <publishTime>07/13/2016 01:28:19</publishTime>
+    </File>
+    <File Include="bin/Sitecore.Reference.Storefront.Powered.by.CommerceServer.dll">
+      <publishTime>07/19/2016 01:45:49</publishTime>
+    </File>
+    <File Include="bin/Sitecore.Reference.Storefront.Powered.by.CommerceServer.pdb">
+      <publishTime>07/19/2016 01:45:49</publishTime>
+    </File>
+    <File Include="bin/stdole.dll">
+      <publishTime>03/19/2010 00:21:56</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>06/23/2016 22:54:51</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>06/23/2016 22:54:51</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>06/23/2016 22:54:51</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>06/23/2016 22:54:52</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>06/23/2016 22:54:51</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>06/23/2016 22:54:50</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>06/23/2016 22:54:50</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>06/23/2016 22:54:51</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>06/23/2016 22:54:51</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>06/23/2016 22:54:51</publishTime>
+    </File>
+    <File Include="bin/UpgradeHelpers.VB6.dll">
+      <publishTime>02/05/2016 12:35:18</publishTime>
+    </File>
+    <File Include="bin/WebActivatorEx.dll">
+      <publishTime>06/23/2016 22:54:52</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>06/23/2016 22:54:52</publishTime>
+    </File>
+    <File Include="Default.aspx">
+      <publishTime>06/23/2016 22:46:39</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>06/23/2016 22:46:39</publishTime>
+    </File>
+    <File Include="Global.asax.solr">
+      <publishTime>06/23/2016 22:46:39</publishTime>
+    </File>
+    <File Include="License.txt">
+      <publishTime>06/23/2016 22:46:39</publishTime>
+    </File>
+    <File Include="MergeFiles/Merge.Commerce.Storefront.config">
+      <publishTime>06/23/2016 22:46:39</publishTime>
+    </File>
+    <File Include="MergeFiles/Views/Merge.web.config">
+      <publishTime>06/23/2016 22:46:39</publishTime>
+    </File>
+    <File Include="OrderObjectMappings.xml">
+      <publishTime>06/23/2016 22:46:39</publishTime>
+    </File>
+    <File Include="OrderPipelineMappings.xml">
+      <publishTime>06/23/2016 22:46:39</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>06/23/2016 22:46:39</publishTime>
+    </File>
+    <File Include="Sitecore/Copyrights/CastleWinsor_Apache.txt">
+      <publishTime>06/23/2016 22:46:39</publishTime>
+    </File>
+    <File Include="Sitecore/Copyrights/Knockout.Validation_MIT.txt">
+      <publishTime>06/23/2016 22:46:39</publishTime>
+    </File>
+    <File Include="Sitecore/Copyrights/Microsoft.AspNet.Mvc_rtw_enu.htm">
+      <publishTime>06/23/2016 22:46:39</publishTime>
+    </File>
+    <File Include="Sitecore/Copyrights/Microsoft.AspNet.Razor_rtw_enu.htm">
+      <publishTime>06/23/2016 22:46:39</publishTime>
+    </File>
+    <File Include="Sitecore/Copyrights/Microsoft.AspNet.WebApi_rtw_enu.htm">
+      <publishTime>06/23/2016 22:46:39</publishTime>
+    </File>
+    <File Include="Sitecore/Copyrights/Microsoft.AspNet.WebPages_rtw_enu.htm">
+      <publishTime>06/23/2016 22:46:39</publishTime>
+    </File>
+    <File Include="Sitecore/Copyrights/Microsoft.Web.Infrastructure-eula.htm">
+      <publishTime>06/23/2016 22:46:39</publishTime>
+    </File>
+    <File Include="Sitecore/Copyrights/Newtonsoft.Json_MIT.txt">
+      <publishTime>06/23/2016 22:46:39</publishTime>
+    </File>
+    <File Include="Sitecore/Copyrights/WebActivatorEx_MSPL.txt">
+      <publishTime>06/23/2016 22:46:39</publishTime>
+    </File>
+    <File Include="SitecoreCommerce/Data/Catalog/Catalog.xml">
+      <publishTime>06/23/2016 22:46:39</publishTime>
+    </File>
+    <File Include="SitecoreCommerce/Data/Inventory/Inventory.xml">
+      <publishTime>06/23/2016 22:46:39</publishTime>
+    </File>
+    <File Include="SitecoreCommerce/Data/Marketing/Marketing.xml">
+      <publishTime>06/23/2016 22:46:39</publishTime>
+    </File>
+    <File Include="SitecoreCommerce/Data/Orders/Orders.xml">
+      <publishTime>06/23/2016 22:46:39</publishTime>
+    </File>
+    <File Include="SitecoreCommerce/Data/Orders/OrdersConfig.xml">
+      <publishTime>06/23/2016 22:46:39</publishTime>
+    </File>
+    <File Include="SitecoreCommerce/Data/Profiles/Profiles.xml">
+      <publishTime>06/23/2016 22:46:39</publishTime>
+    </File>
+    <File Include="Solr_Schema.xml">
+      <publishTime>06/23/2016 22:46:39</publishTime>
+    </File>
+    <File Include="Views/Storefront/Account/MyOrder.cshtml">
+      <publishTime>06/23/2016 22:46:39</publishTime>
+    </File>
+    <File Include="Views/Storefront/Account/MyOrders.cshtml">
+      <publishTime>06/23/2016 22:46:39</publishTime>
+    </File>
+    <File Include="web.config">
+      <publishTime>07/16/2016 19:48:54</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
