@@ -28,6 +28,7 @@ namespace Sitecore.Reference.Storefront.Managers
     using System.Collections.Generic;
     using System.Linq;
     using Sitecore.Commerce.Entities.Inventory;
+    using Commerce.Entities.Prices;
 
     /// <summary>
     /// Defines the WishListManager class.
@@ -304,7 +305,11 @@ namespace Sitecore.Reference.Storefront.Managers
             {
                 ProductCatalog = model.ProductCatalog,
                 ProductId = model.ProductId,
-                ProductVariantId = model.VariantId
+                ProductVariantId = model.VariantId,
+                Price = new Price
+                {
+                    Amount = 0
+                }
             };
 
             var line = new WishListLine
@@ -384,8 +389,8 @@ namespace Sitecore.Reference.Storefront.Managers
                 {
                     continue;
                 }
-
-                line.Product.StockStatus = new Sitecore.Commerce.Entities.Inventory.StockStatus(Convert.ToInt32((decimal)stockInfo.Properties["OnHandQuantity"]), stockInfo.Status.Name);
+                
+                line.Product.StockStatus = stockInfo.Status;
                 this.InventoryManager.VisitedProductStockStatus(storefront, stockInfo, string.Empty);
             }
         }

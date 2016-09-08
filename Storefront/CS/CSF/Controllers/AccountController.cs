@@ -400,6 +400,7 @@ namespace Sitecore.Reference.Storefront.Controllers
         /// Recent Orders PlugIn for Account Management Home Page
         /// </summary>
         /// <returns>The view to display recent orders</returns>
+        [SuppressMessage("Microsoft.Maintainability", "CA1506:AvoidExcessiveClassCoupling")]
         [HttpPost]
         [Authorize]
         [ValidateJsonAntiForgeryToken]

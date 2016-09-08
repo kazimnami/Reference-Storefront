@@ -33,6 +33,7 @@
     <TargetFrameworkProfile />
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -91,6 +92,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Lib\CommerceServer.Core.CrossTier.dll</HintPath>
     </Reference>
+    <Reference Include="CommerceServer.Core.Orders.CrossTier, Version=10.0.0.0, Culture=neutral, PublicKeyToken=f5c79cb11734af7a" />
     <Reference Include="CommerceServer.Core.Profiles, Version=10.0.0.0, Culture=neutral, PublicKeyToken=f5c79cb11734af7a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\Lib\CommerceServer.Core.Profiles.dll</HintPath>
@@ -314,7 +316,9 @@
     <Content Include="App_Config\CommerceServer.Core.config">
       <SubType>Designer</SubType>
     </Content>
-    <None Include="Properties\PublishProfiles\DynamicsRetail.pubxml" />
+    <Content Include="App_Config\Include\Reference.Storefront\Reference.Storefront.WishLists.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="MergeFiles\Merge.Commerce.Storefront.config">
       <SubType>Designer</SubType>
     </Content>
@@ -322,15 +326,8 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Solr_Schema.xml" />
-    <Content Include="web.config" />
     <Content Include="Views\Storefront\Account\MyOrders.cshtml" />
     <Content Include="Views\Storefront\Account\MyOrder.cshtml" />
-    <None Include="web.Debug.config">
-      <DependentUpon>web.config</DependentUpon>
-    </None>
-    <None Include="web.Release.config">
-      <DependentUpon>web.config</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -370,6 +367,19 @@
     <Compile Include="Connect\Pipelines\Payments\GetPaymentOptions.cs" />
     <Compile Include="Connect\Pipelines\Shipping\GetShippingMethods.cs" />
     <Compile Include="Connect\Pipelines\Shipping\GetShippingOptions.cs" />
+    <Compile Include="Connect\Pipelines\Utilities\OrderGroupUtility.cs" />
+    <Compile Include="Connect\Pipelines\Utilities\UserUtility.cs" />
+    <Compile Include="Connect\Pipelines\WishLists\AddLinesToWishList.cs" />
+    <Compile Include="Connect\Pipelines\Constants.cs" />
+    <Compile Include="Connect\Pipelines\WishLists\CreateWishList.cs" />
+    <Compile Include="Connect\Pipelines\WishLists\GetWishList.cs" />
+    <Compile Include="Connect\Pipelines\WishLists\GetWishLists.cs" />
+    <Compile Include="Connect\Pipelines\WishLists\TranslateOrderGroupToWishListHeader.cs" />
+    <Compile Include="Connect\Pipelines\WishLists\TranslateOrderGroupToWishList.cs" />
+    <Compile Include="Connect\Pipelines\WishLists\TranslateOrderGroupToWishListHeaderRequest.cs" />
+    <Compile Include="Connect\Pipelines\WishLists\TranslateOrderGroupToWishListRequest.cs" />
+    <Compile Include="Connect\Pipelines\WishLists\TranslateOrderGroupToWishListHeaderResult.cs" />
+    <Compile Include="Connect\Pipelines\WishLists\TranslateOrderGroupToWishListResult.cs" />
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\CSBaseController.cs" />
     <Compile Include="Controllers\LandingController.cs" />
@@ -379,6 +389,7 @@
     <Compile Include="Controllers\NavigationSearchController.cs" />
     <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="Controllers\SharedController.cs" />
+    <Compile Include="Controllers\WishListController.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -441,12 +452,15 @@
       <Link>CustomDictionary.xml</Link>
     </CodeAnalysisDictionary>
   </ItemGroup>
-  <!--<PropertyGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\localhost.pubxml" />
+  </ItemGroup>
+  <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
-  </PropertyGroup>-->
+  </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <!--<Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />-->
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
     <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />

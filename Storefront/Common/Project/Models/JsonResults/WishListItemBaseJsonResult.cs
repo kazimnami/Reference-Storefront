@@ -48,9 +48,9 @@ namespace Sitecore.Reference.Storefront.Models.JsonResults
 
             this.DisplayName = product.DisplayName;
             this.Color = product.Properties["Color"] as string;
-            this.LineDiscount = ((CommerceTotal)line.Total).LineItemDiscountAmount.ToString(Sitecore.Context.Language.CultureInfo);
+            //this.LineDiscount = ((CommerceTotal)line.Total).LineItemDiscountAmount.ToString(Sitecore.Context.Language.CultureInfo);
             this.Quantity = line.Quantity.ToString(Sitecore.Context.Language.CultureInfo);
-            this.LineTotal = line.Total.Amount.ToCurrency(currencyCode);
+            //this.LineTotal = line.Total.Amount.ToCurrency(currencyCode);
             this.ExternalLineId = line.ExternalId;
             this.ProductId = product.ProductId;
             this.VariantId = product.ProductVariantId;
